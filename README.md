@@ -6,19 +6,19 @@
 
 
 
-### each( elements, cb)
+### function `each( elements,cb)`
 * This function gives each element in the `elements` to the `cb`(call-back function).
 * It returns `undefined`.
 
 
-### map( elements, cb)
+### function `map( elements,cb)`
 * This function modifies each element in the `elements` according to the `cb`(call-back function).
 * It returns array with modified elements.
 * It return and empty array `[]` when elements is empty.
 
 
 
-### reduce( elements, cb, startingValue)
+### function `reduce( elements,cb,startingValue)`
 * This function gives each element in the `elements` to the `cb`(call-back function).
 * `startingValue` is the value it starts from.
 * To add all the items in the given `elements` the c should be as follows:
@@ -29,20 +29,60 @@ let cb = (store,element) => store+element;
 * It returns the combined value of elements.
 
 
-### find(elements, cb)
+### function  `find(elements,cb)`
 * This function gives each element in the `elements` to the `cb`(call-back function).
 * It returns the **element** itself if the `cb` returns `true`.
 
 
 
-### filter(elements, cb)
+### function `filter(elements,cb)`
 * This function gives each element in the `elements` to the `cb`(call-back function).
 * It returns array of elements that passes the `cb` condition.
 
 
 
-### flatten(elements)
+### function `flatten(elements)`
 * This function removes nested array of any depth using recursion.
 * It returns the fattened array.
 
+---
+## Class objects_exercise 
+>`obj` must be an object (`{key:value}`).
+
+
+
+### function `keys(obj)`
+* This function takes an object.
+* It returns array of **keys**.
+
+
+### function `values(obj)`
+* This function takes an object.
+* It returns array of **values**.
+
+
+### function `mapObject(obj,cb)`
+* This function takes an object.
+* It returns array of transformed value according to call back (`cb`) function.
+
+
+### function `pairs(obj)`
+* This function takes an object.
+* It returns array of **keys and value** pairs.
+
+
+### function `invert(obj)`
+* This function takes an object.
+* keys and values will be interchanged.
+* It returns array of **inverted keys and value** pairs.
+
+
+### function `defaults(obj,defaultProps)`
+* This function takes an object and defaultProps(**key value pair**).
+*An example for the defaultProps is:
+```javascript
+let defaultProps = { key1:value1, key2:value2};
+```
+* This function checks weather the object contains default values if not then it inserts it to the object.
+* It returns object after adding defaultProps.
 ---
