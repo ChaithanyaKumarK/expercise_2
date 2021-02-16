@@ -104,7 +104,7 @@ let defaultProps = { key1:value1, key2:value2};
 }
 
 ### function `cacheFunction(cb)`
-> If call-back function doesn't return anything then `cacheFunction(cb)` returns the executed `cb` itself.
+> If call-back function doesn't return anything then `cacheFunction(cb)` returns function that executes `cb` each time you call.
 * This function returns a function that invokes `cb`.
 *  A cache (object) will be kept in closure scope.
 *  If the returned function is invoked with arguments that it has already seen then it will return the cached result and not invoke `cb` again.
