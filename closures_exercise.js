@@ -27,16 +27,16 @@ class closures {
     cacheFunction(cb) {
         if (cb == undefined) { return null; }
         let store = {};
-        return function (arg) {
-            if (store[arg] === undefined) {
-                store[arg] = cb(arg);
-                console.log("first time");
-                return store[arg];
-
+        return function (...arg) {
+            let StrArg = String(arg);
+            if (store.hasOwnProperty(StrArg)) {
+                if (store[StrArg] == undefined) {//It runs the function as it is a non-returning function
+                    return cb(...arg);
+                }
+                return store[StrArg];
             } else {
-                console.log("from stored");
-                return store[arg];
-
+                store[StrArg] = cb(...arg);
+                return store[StrArg];
             }
 
         }
