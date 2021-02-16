@@ -42,7 +42,7 @@ let cb = (store,element) => store+element;
 
 
 ### function `flatten(elements)`
-* This function removes nested array of any depth using recursion.
+* This function removes a nested array of any depth using recursion.
 * It returns the fattened array.
 
 ---
@@ -73,8 +73,8 @@ let cb = (store,element) => store+element;
 
 ### function `invert(obj)`
 * This function takes an object.
-* keys and values will be interchanged.
-* It returns array of **inverted keys and value** pairs.
+* keys and values will be inter-changed.
+* It returns an array of **inverted keys and value** pairs.
 
 
 ### function `defaults(obj,defaultProps)`
@@ -83,6 +83,7 @@ let cb = (store,element) => store+element;
 ```javascript
 let defaultProps = { key1:value1, key2:value2};
 ```
-* This function checks weather the object contains default values if not then it inserts it to the object.
-* It returns object after adding defaultProps.
+* This function checks whether the object contains default values. 
+* If default values are not found the function append the values to the object.
+* It returns the object after adding default props.
 ---
